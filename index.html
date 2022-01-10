@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration form</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="title">
+            <h3>Personality/Patient Data Entry Form</h3>
+        </div>
+
+        <div class="form-area">
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                       <div class="form-group">
+                           <div class="row">
+                            <div class="col-sm-4">
+                           <label for="reg_number" class="reg-label">Registeration Number</label>
+                        </div>
+                        <div class="col-sm-5">
+                           <input type="text" name="reg_number" id="reg_number" class="form-control form-control-sm" required>
+                        </div>
+                        <div class="col-sm-3">
+                           <input type="checkbox" name="autogenerate" id="autogenerate" onclick="myFunction()">
+                           <label for="autogenerate" class="reg-label">Auto Generate</label>
+                        </div>
+                        </div>
+                       </div>
+
+                       <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="f_name" class="reg-label">First Name</label>
+                     </div>
+                     <div class="col-sm-6">
+                        <input type="text" name="f_name" id="f_name" class="form-control form-control-sm" required>
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="l_name" class="reg-label">Last Name</label>
+                     </div>
+                     <div class="col-sm-6">
+                        <input type="text" name="l_name" id="l_name" class="form-control form-control-sm" required>
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="nhis_number" class="reg-label">NHIS Number</label>
+                     </div>
+                     <div class="col-sm-6">
+                        <input type="text" name="nhis_number" id="nhis_number" class="form-control form-control-sm">
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="address" class="reg-label">Address</label>
+                     </div>
+                     <div class="col-sm-7">
+                        <textarea name="address" id="address" cols="30" rows="4" class="form-control form-control-sm" required></textarea>
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="dob" class="reg-label">Date of Birth(dd/mm/yy)</label>
+                     </div>
+                     <div class="col-sm-4">
+                        <input type="date" name="dob" id="dob" class="form-control form-control-sm" required>
+                     </div>
+                     <div class="col-sm-1">
+                         <label for="age" class="reg-label">Age</label>
+                     </div>
+                     <div class="col-sm-2">
+                         <input type="text" name="age" id="age" class="form-control form-control-sm" required>
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="sex" class="reg-label">Sex</label>
+                     </div>
+                     <div class="col-sm-2">
+                        <select name="sex" id="sex" class="form-select form-select-sm" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="state" class="reg-label">State of Origin</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="state" id="state" class="form-control form-control-sm" required>
+                     </div>
+                     <div class="col-sm-1">
+                        <label for="tribe" class="reg-label">Tribe</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="tribe" id="tribe" class="form-control form-control-sm" required>                         
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="department" class="reg-label">Department</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="department" id="department" class="form-control form-control-sm">
+                     </div>
+                     <div class="col-sm-2">
+                        <label for="next_kin" class="reg-label">Next of Kin</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="next_kin" id="next_kin" class="form-control form-control-sm">                         
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="occupation" class="reg-label">Occupation</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="occupation" id="occupation" class="form-control form-control-sm" required>
+                     </div>
+                     <div class="col-sm-2">
+                        <label for="id_no" class="reg-label">ID No</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="id_no" id="id_no" class="form-control form-control-sm" required>                         
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="office_num" class="reg-label">Phone Numbers : <span>Office</span></label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="office_num" id="office_num" class="form-control form-control-sm">
+                     </div>
+                     <div class="col-sm-2">
+                        <label for="home_num" class="reg-label">Home</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="home_num" id="home_num" class="form-control form-control-sm">                         
+                     </div>
+                     </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                         <div class="col-sm-4">
+                        <label for="date_employ" class="reg-label">Date of Employment(dd/mm/yy)</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="date" name="date_employ" id="date_employ" class="form-control form-control-sm">
+                     </div>
+                     <div class="col-sm-2">
+                        <label for="direct_line" class="reg-label">Others/Direct Line</label>
+                     </div>
+                     <div class="col-sm-3">
+                        <input type="text" name="direct_line" id="direct_line" class="form-control form-control-sm">                         
+                     </div>
+                     </div>
+                    </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                       <div class="card">
+                           <div class="card-header"><span>Account</span></div>
+                           <div class="card-body">
+
+                            <div class="form-group">
+                                <div class="row">
+                                 <div class="col-sm-3">
+                                <label for="ac_charge" class="reg-label">Charge A/C</label>
+                             </div>
+                             <div class="col-sm-8">
+                                <input type="text" name="ac_charge" id="ac_charge" class="form-control form-control-sm">
+                             </div>
+                             </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                 <div class="col-sm-3">
+                                <label for="provider" class="reg-label">Provider</label>
+                             </div>
+                             <div class="col-sm-8">
+                                <input type="text" name="provider" id="provider" class="form-control form-control-sm">
+                             </div>
+                             </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                 <div class="col-sm-3">
+                                <label for="relationship" class="reg-label">Relationship</label>
+                             </div>
+                             <div class="col-sm-8">
+                                <input type="text" name="relationship" id="relationship" class="form-control form-control-sm">
+                             </div>
+                             </div>
+                            </div>
+
+                           </div>
+                       </div>
+
+                       <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-3">
+                           <label for="medical_alerts" class="reg-label">Medical Alerts</label>
+                        </div>
+                        <div class="col-sm-8">
+                           <input type="text" name="med_alert1" id="med_alert1" class="form-control form-control-sm" style="margin-bottom: 10px;">
+                           <input type="text" name="med_alert2" id="med_alert2" class="form-control form-control-sm" style="margin-bottom: 10px;">
+                           <input type="text" name="med_alert3" id="med_alert3" class="form-control form-control-sm">
+                        </div>
+                        </div>                           
+                       </div>
+
+                       <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-3">
+                           <label for="drugs_interactions" class="reg-label">Drugs/Interactions</label>
+                        </div>
+                        <div class="col-sm-8">
+                           <input type="text" name="drug_inter1" id="drug_inter1" class="form-control form-control-sm" style="margin-bottom: 10px;">
+                           <input type="text" name="drug_inter2" id="drug_inter2" class="form-control form-control-sm" style="margin-bottom: 10px;">
+                           <input type="text" name="drug_inter3" id="drug_inter3" class="form-control form-control-sm">
+                        </div>
+                        </div>                           
+                       </div>
+
+                       <div class="form-group col-sm-11">
+                          <div align="right">
+                             <button class="btn btn-primary" id="entry">Save</button>
+                          </div>
+                       </div>
+
+                    </div>
+                </div>
+        </div>
+
+        <br>
+        <div class="table-responsive">
+           <table class="table table-bordered" id="display">
+                 <tr class="bg-info">
+                   <th>RegNo</th>
+                   <th>Fname</th>
+                   <th>Lname</th>
+                   <th>Name</th>
+                   <th>NHIS</th>
+                   <th>Address</th>
+                   <th>Date of Birth</th>
+                   <th>Age</th>
+                   <th>Sex</th>
+                   <th>State of Origin</th>
+                   <th>Tribe</th>
+                   <th>Department</th>
+                   <th>Next of Kin</th>
+                   <th>Occupation</th>
+                   <th>ID No</th>
+                   <th>Office Phone Number</th>
+                   <th>Home Phone Number</th>
+                   <th>Date of Employment</th>
+                   <th>Others/Direct Line</th>
+                   <th>Charge A/C</th>
+                   <th>Provider</th>
+                   <th>Relationship</th>
+                   <th>Medical Alert 1</th>
+                   <th>Medical Alert 2</th>
+                   <th>Medical Alert 3</th>
+                   <th>Drugs/Interactions 1</th>
+                   <th>Drugs/Interactions 2</th>
+                   <th>Drugs/Interactions 3</th>
+                 </tr>
+           </table>
+        </div>
+    </div>
+    
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+       // program to generate random strings
+
+// declare all characters
+const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+function generateString(length) {
+    let result = ' ';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+
+    return result;
+}
+
+console.log(generateString(11));
+
+function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("autogenerate");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+   document.getElementById("reg_number").value = generateString(15);
+  } else {
+   document.getElementById("reg_number").value = '';
+  }
+}
+
+    </script>
+</body>
+</html>
