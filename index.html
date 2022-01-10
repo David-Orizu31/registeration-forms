@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registeration form</title>
+    <title>Personality/Patient Data Entry Form</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -316,35 +316,35 @@
     <script src="js/script.js"></script>
 
     <script>
-       // program to generate random strings
-
-// declare all characters
-const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-function generateString(length) {
-    let result = ' ';
-    const charactersLength = characters.length;
-    for ( let i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-    }
-
-    return result;
-}
-
-console.log(generateString(11));
-
-function myFunction() {
+      // program to generate random strings
+  
+  // declare all characters
+  const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  
+  function generateString(length) {
+   let result = ' ';
+   const charactersLength = characters.length;
+   for ( let i = 0; i < length; i++ ) {
+       result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+  
+   return result;
+  }
+  
+  console.log(generateString(8));
+  
+  function myFunction() {
   // Get the checkbox
   var checkBox = document.getElementById("autogenerate");
-
+  
   // If the checkbox is checked, display the output text
   if (checkBox.checked == true){
-   document.getElementById("reg_number").value = generateString(11);
+  document.getElementById("reg_number").value = generateString(8) + new Date().getTime();
   } else {
-   document.getElementById("reg_number").value = '';
+  document.getElementById("reg_number").value = '';
   }
-}
-
-    </script>
+  }
+  
+   </script>
 </body>
 </html>
