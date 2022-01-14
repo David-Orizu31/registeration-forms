@@ -35,3 +35,12 @@
 .card-body {
     padding: 10px !important;
 }
+
+.select2 {
+    width: 100% !important;
+}
+
+.select2-selection {
+    height: 33px !important;
+    border-radius: 0px !important;
+}

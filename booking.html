@@ -7,6 +7,7 @@
     <title>Booking Appointment</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/select2.min.css">
 </head>
 <body>
 
@@ -14,10 +15,204 @@
         <div class="title">
             <h3>Booking Appointment</h3>
         </div>
+
+        <form action="">
+        <div class="form-area">
+            <div class="row">
+    
+                <div class="col-sm-6">
+                    <div class="col-md-11">
+    
+                   <div class="form-group">
+                       <label for="patient_id" class="reg-label">Patient Id</label>
+                       <select name="patient_id" id="patient_id" class="form-select" required>
+                           <option value="" selected disabled>--- Select ---</option>
+                            <option value="1">Adewole</option>
+                            <option value="2">Obinna</option>
+                            <option value="3">Solomon</option>
+                       </select>
+                   </div>
+    
+                   <div class="form-group">
+                       <label for="procedure_code" class="reg-label">Procedure Code</label>
+                       <select name="procedure_code" id="procedure_code" class="form-select" required>
+                           <option value="" selected disabled>--- Select ---</option>
+                           <option value="S/P">Scaling and Polishing</option>
+                           <option value="EXT">Extraction</option>
+                           <option value="TOOTAMPT">Tooth Amputation</option>
+                           <option value="RCT 1">Root canal treatment</option>
+                           <option value="COMP P2">Comprehensive Dental Care</option>
+                           <option value="REVIEW">Review</option>
+                       </select>
+                   </div>
+    
+                   <div class="form-group">
+                    <label for="doctor" class="reg-label">Doctor</label>
+                    <select name="doctor" id="doctor" class="form-select" required>
+                        <option value="" selected disabled>--- Select ---</option>
+                        <option value="00001">Dr John Okey</option>
+                        <option value="00002">Dr Peter Paul</option>
+                        <option value="00003">Dr Johnson Udoh</option>
+                        <option value="00025">Dr Pius Agbo</option>
+                        <option value="01003">Dr Pam Nenshak</option>
+                        <option value="00203">Dr Bulus Gyang</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="hygienist" class="reg-label">Hygienist</label>
+                    <select name="hygienist" id="hygienist" class="form-select" required>
+                        <option value="" selected disabled>--- Select ---</option>
+                        <option value="00022">Dr Praise Disu</option>
+                        <option value="00302">Dr Okon Abasi</option>
+                        <option value="00006">Dr Ijeoma Ada</option>
+                        <option value="00425">Dr Pius Agbo</option>
+                        <option value="01013">Dr Pam Nenshak</option>
+                        <option value="04203">Dr Bulus Gyang</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="dsa" class="reg-label">DSA</label>
+                    <select name="dsa" id="dsa" class="form-select" required>
+                        <option value="" selected disabled>--- Select ---</option>
+                        <option value="00008">Dr Dorathy Agun</option>
+                        <option value="00052">Dr Peter Paul</option>
+                        <option value="00043">Dr Johnson Udoh</option>
+                        <option value="00029">Dr Pius Agbo</option>
+                        <option value="01008">Dr Pam Nenshak</option>
+                        <option value="00233">Dr Bulus Gyang</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="technologist" class="reg-label">Technologist</label>
+                    <select name="technologist" id="technologist" class="form-select" required>
+                        <option value="" selected disabled>--- Select ---</option>
+                        <option value="00500">Charles Akubu</option>
+                        <option value="00602">Kosoko Kolawole</option>
+                        <option value="00009">Ajayi Samuel</option>
+                        <option value="00038">Melvin Kelvin</option>
+                        <option value="01002">Chibuike Okeke</option>
+                        <option value="00416">Oche Faith</option>
+                    </select>
+                </div>
+    
+                </div>
+                </div>
+    
+                <div class="col-sm-6">
+                    <div class="col-md-11">
+    
+                        <div class="form-group">
+                            <label for="cost" class="reg-label">Cost</label>  
+                            <input type="text" name="cost" id="cost" class="form-control" placeholder="Enter Amount" required>                      
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="appionted_date" class="reg-label">Appointed Date</label>
+                            <input type="date" name="appointed_date" id="appointed_date" class="form-control" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="time" class="reg-label">Time</label>
+                            <input type="time" name="time" id="time" class="form-control" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="alloted_time" class="reg-label">Alloted Time</label>
+                            <select name="alloted_time" id="alloted_time" class="form-select" required>
+                                <option value="20">20 mins</option>
+                                <option value="30">30 mins</option>
+                                <option value="40">40 mins</option>
+                                <option value="45">45 mins</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group" align="right">
+                            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </form>
+
+    <br>
+
+    <div class="table-responsive">
+        <table class="table table-bordered" id="example">
+            <thead class="bg-info" id="div">
+                <tr>
+                    <th>Reg No</th>
+                    <th>Dates</th>
+                    <th>TreatCode</th>
+                    <th>dCode</th>
+                    <th>HygCode</th>
+                    <th>dsaCode</th>
+                    <th>TechCode</th>
+                    <th>Cost</th>
+                    <th>Time</th>
+                    <th>Alloted Time (mins)</th>
+                </tr>
+            </thead>
+            <tbody id="div2">
+                <tr>
+                    <td>334222333</td>
+                    <td>2022-01-31</td>
+                    <td>S/P</td>
+                    <td>00002</td>
+                    <td>00302</td>
+                    <td>00008</td>
+                    <td>00500</td>
+                    <td>₦ 5,500.00</td>
+                    <td>11:00:00</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
     </div>
 
+    </div>
+
+    <script src="js/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script>    
+    <script src="js/select2.min.js"></script>
+
+    <script>
+        $("#patient_id").select2( {
+            placeholder: "Select Patient",
+            allowClear: true
+            } );
+    
+            $("#procedure_code").select2( {
+            placeholder: "Select Procedure Code",
+            allowClear: true
+            } );
+    
+            $("#doctor").select2( {
+            placeholder: "Select Doctor",
+            allowClear: true
+            } );
+    
+            $("#hygienist").select2( {
+            placeholder: "Select Hygienist",
+            allowClear: true
+            } );
+    
+            $("#dsa").select2( {
+            placeholder: "Select DSA",
+            allowClear: true
+            } );
+    
+            $("#technologist").select2( {
+            placeholder: "Select Technologist",
+            allowClear: true
+            } );
+        </script>
 
     </body>
     </html>
